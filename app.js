@@ -2,8 +2,10 @@ const express = require('express');
 const app = express();
 const bodyparser = require('body-parser');
 
+app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static('public'));
 app.set('view engine','ejs');
+
 app.get('/',(req,res)=>{
 
     res.redirect('/search');
@@ -11,9 +13,16 @@ app.get('/',(req,res)=>{
 
 app.get('/search',(req,res)=>{
 
-    res.send("Hi there");
+
+    res.render('index');
 });
 
+app.post('/search',(req,res)=>{
+
+    console.log(req.body);
+    res.render('search_results',{cityname: req.body.ctyname});
+
+});
 
 
 
