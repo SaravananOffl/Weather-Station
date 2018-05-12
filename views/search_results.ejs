@@ -1,5 +1,9 @@
 <% include ./partials/headers.ejs%>
 
 <h1>You've searched for <%= cityname %></h1>
+<% console.log(weather)%>
+
+<h2> Temperature is : <%= weather.main.temp%></h2>
+<h2> <%= weather.weather[0].description%></h2>
 
 <% include ./partials/footers.ejs%>
