@@ -3,8 +3,19 @@
 
 <div class="container">
 <h1> Weather Station </h1>
+<script>
+    (form)=>{
+        if(form.cityname.value === ''){
+            alert(' Enter any city name')
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+</script>
 
-<form  autocomplete="off" method ='post' action = '/search'>
+<form  autocomplete="off" method ='post' action = '/search ' onsubmit="return checkform(this)">
 
     <div class="active-cyan-3 active-cyan-4 mb-4">
         <input style="height: 7%" class="autocomplete form-control" type="text" name = "cityname" placeholder="cityname" aria-label="Search">
