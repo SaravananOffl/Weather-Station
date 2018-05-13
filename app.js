@@ -7,7 +7,7 @@ app.use(express.static('public'));
 app.set('view engine','ejs');
 
 
-const apiKey ='e931741e1fe41345b9a1b21ed77cac63';
+const apiKey = require('./config').API_KEY;
 
 app.get('/',(req,res)=>{
 
