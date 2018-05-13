@@ -25,15 +25,16 @@ app.post('/search',(req,res)=>{
     console.log(req.body);
     let city = req.body.cityname;
     url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    request(url,(err,response,body)=>{
-        if(!err) {
-        const weather = JSON.parse(body);
-            console.log("NO ");
-            res.render('search_results',{cityname: req.body.ctyname, weather: weather});
 
+    request(url,(err,response,body)=>{
+        const weather = JSON.parse(body);
+        if(err || weather.cod ==='404') {
+            res.send('404 Error');
         }
-        else{
-            res.send("Error");
+        else {
+            console.log("NO ");
+            res.render('search_results',{cityname: req.body.cityname, weather: weather});
+
         }
 
     });

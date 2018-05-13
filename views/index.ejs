@@ -1,12 +1,19 @@
 <% include ./partials/headers.ejs%>
+<link rel="stylesheet" href="main.css">
 
+<div class="container">
 <h1> Weather Station </h1>
 
-<form method ='post' action = '/search'>
-    <div>
-        <label>City Name</label>
-        <input type="text" name = "cityname" placeholder="cityname">
+<form  autocomplete="off" method ='post' action = '/search'>
+
+    <div class="active-cyan-3 active-cyan-4 mb-4">
+        <input style="height: 7%" class="autocomplete form-control" type="text" name = "cityname" placeholder="cityname" aria-label="Search">
     </div>
-    <button type="submit">Search</button>
+
+     <button  class="wrapper button" type="submit">Search</button>
 </form>
+
+</div>
+
 <% include ./partials/footers.ejs%>
+

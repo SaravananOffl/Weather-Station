@@ -1,0 +1,43 @@
+body{
+    background-color: #2196F3;
+    color: white;
+    text-align: center;
+}
+
+*{
+    background-color: #2196F3;
+}
+h1{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+.search_res{
+    color: white;
+    border-radius: 9px;
+    border-style:solid ;
+    max-width: 80%;
+    margin: 50px auto;
+}
+
+button:hover{
+    color :#4dd0e1;
+    background: white;
+
+}
+button {
+    border: black;
+    background: none;
+    height: 10%;
+    width: 10%;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+
+}
+li{
+    font-size: 30px;
+}
+ul{
+    list-style-type: none;
+}

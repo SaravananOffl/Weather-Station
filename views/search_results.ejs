@@ -1,9 +1,19 @@
 <% include ./partials/headers.ejs%>
+<link rel="stylesheet" href="search_results.css">
 
-<h1>You've searched for <%= cityname %></h1>
-<% console.log(weather)%>
 
-<h2> Temperature is : <%= weather.main.temp%></h2>
-<h2> <%= weather.weather[0].description%></h2>
 
+<h1><u>You've searched for <%= cityname %></u></h1>
+<div class="search_res">
+
+    <ul>
+        <li> Description  :           <%= weather.weather[0].description%></li>
+        <li> Temperature  :            <%= weather.main.temp%> </li>
+        <li>    Humidity  :            <%=weather.main.humidity%> % </li>
+    </ul>
+
+<button onclick="location.href='/search'">Go back</button>
 <% include ./partials/footers.ejs%>
+
+
+</div>
