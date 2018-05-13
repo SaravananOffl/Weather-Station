@@ -20,6 +20,10 @@ app.get('/search',(req,res)=>{
     res.render('index');
 });
 
+app.get('*',(req,res)=>{
+
+res.render('default_route');
+});
 app.post('/search',(req,res)=>{
 
     console.log(req.body);
